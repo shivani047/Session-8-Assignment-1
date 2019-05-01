@@ -1,0 +1,54 @@
+1. Calculate the average salary by gender and smoking status.
+
+> aggregate(RcmdrTestDrive$salary, by = list(RcmdrTestDrive$gender, RcmdrTestDrive$smoking),
++           FUN =mean)
+  Group.1   Group.2        x
+1  Female Nonsmoker 692.9093
+2    Male Nonsmoker 740.9080
+3  Female    Smoker 733.2122
+4    Male    Smoker 751.4900
+> # average salary by gender
+> aggregate(RcmdrTestDrive$salary, by = list(RcmdrTestDrive$gender),
++           FUN =mean)
+  Group.1        x
+1  Female 698.0911
+2    Male 743.3915
+> # average salary by smoking status
+> aggregate(RcmdrTestDrive$salary, by = list(RcmdrTestDrive$smoking),
++ FUN =mean)
+    Group.1        x
+1 Nonsmoker 719.3792
+2    Smoker 746.3494
+
+
+
+
+b. Which gender has the highest mean salary?
+Male has highes mean salary 743.3915
+
+
+
+
+c. Report the highest mean salary.
+highest mean salary is of male which are smoker.
+Male    Smoker 751.4900
+
+gender wise highest mean salary is of males
+ Male 743.3915
+ 
+ smoking wise smoker has highest mean salary
+ Smoker 746.3494
+ 
+ 
+ d. Compare the spreads for the genders by calculating the
+standard deviation of salary by gender.
+
+> # standard deviation of salary by gender.
+> aggregate(RcmdrTestDrive$salary, by = list(RcmdrTestDrive$gender),
++           FUN =sd)
+  Group.1        x
+1  Female 130.7053
+2    Male 158.5423
+
+# As we can see male has high standard deviation of salary so we can say that male has higher range of salary then females.
+
